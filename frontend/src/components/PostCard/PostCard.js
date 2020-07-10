@@ -177,6 +177,62 @@ const PostCard = ({
     setIsOptionOpen(false);
   };
 
+  // changes in home 
+const RenderVideo=({src}) =>{
+
+  return(
+<div className="header">
+            
+            <video
+            autoPlay="autoplay" muted="muted" loop="loop" playsInline="playsinline" preload="metadata" data-aos="fade-up"
+            
+            id="video"
+            className="video "
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            // onClick={this.paused ? this.play() : this.pause()}
+            
+            poster={src}
+            >
+            </video>
+            <div className="overlay">
+              <p><b>@user name</b></p>
+              <p>#tags</p>
+              <p>
+            <i>
+            <marquee width="80%"  loop="3" behavior="scroll" scrollamount="2" direction="left">bg songs lyricsbg songs lyricsbg songs lyrics</marquee>
+                 </i>
+            </p>
+            
+            </div>  			  
+            <div className="overlay1">
+            <div className="image">
+              {/* <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" /> */}
+            <i className="fa fa-plus "></i> 
+              </div>
+            <div className="heart">
+                 <i id="heart_i"></i>
+                 <span id="heart_span">loved!</span>
+            <p id="heart_i">300k</p>
+               </div>  
+               <div className="comment">
+                 <i className="fa fa-commenting fa-2x"></i> 
+            <p id="comment_i">300k</p>
+                 
+               </div>	  
+               <div className="share">
+                 <i className="fa fa-share-square-o fa-2x" ></i> 
+            <p id="comment_i">Share</p>
+                 
+               </div>				 
+            
+              
+            
+            </div>              
+            
+            </div>
+  )
+}
+//changes in home end
   return (
     <>
       <Root>
@@ -211,8 +267,8 @@ const PostCard = ({
         <Spacing left="sm" bottom="sm" top="xs">
           <H3>{title}</H3>
         </Spacing>
-
-        {image && <Poster src={image} onClick={openModal} />}
+{/* changing this <Poster src={image} onClick={openModal} /> to  */}
+        {image && <RenderVideo src={image} onClick={openModal} />}   
 
         <BottomRow>
           <CountAndIcons>

@@ -153,7 +153,7 @@ const Home = () => {
 export default Home;
 
 
-<div class="header">
+{/* <div class="header">
             
 <video
 autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up"
@@ -201,4 +201,4 @@ poster="https://tradablebits.com/blog/content/images/2020/01/tiktok-ad.png"
 
 </div>              
 
-</div>
+</div> */}
