@@ -1,0 +1,280 @@
+.footer {
+    position:fixed;
+     bottom: 0;
+     width: 100%;
+     height: 60px;
+     background-color: #f5f5f5;
+
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar{
+    border-top: 1px solid transparent;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.group-container{
+    padding:0;
+    height:100%;
+}
+
+.selectors, .block{
+    height:100%;
+    width:100%;
+}
+
+.selectors button{
+    border: 0;
+    border-radius: 0;
+    background-color: #f8f9fa !important;
+    width:25%;
+    margin-left: 0;
+}
+
+.selectors button:active{
+    border:0;
+}
+
+.selectors button:focus{
+    border:0;
+    outline: 0;
+    box-shadow: 0 0 0 0px;
+}
+
+.active, .selector-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+.inactive{
+    display: none;
+}
+
+.selector-holder span{
+    font-size: 0.8rem;
+}
+
+/* Colors of the buttons*/
+.button-active, .selectors button:hover, .selectors button:active, .selectors button:focus{
+    color: #ff0000;
+}
+
+.button-inactive{
+    color: #000;
+}
+
+@media screen and (max-width : 1920px){
+    .footer{
+    visibility:hidden;
+    }
+  }
+  @media screen and (max-width : 906px){
+   /* .desk{
+    visibility:hidden;
+    } */
+   .footer{
+    visibility:visible;
+    }
+  }
+
+  /* home css i.e. video part */
+  .video{
+    width:100%;
+    height:1840px;
+  }
+  .header{
+    position: relative;
+background-color: black;
+height: 75vh;
+min-height: 25rem;
+width: 100%;
+overflow: hidden;
+  }
+  .header video {
+  object-fit: initial;
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: 100%;
+height: auto;
+z-index: 0;
+-ms-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+
+}
+
+.overlay {
+position:absolute;
+bottom:20px;
+left:10px;
+z-index:1;
+}
+
+.overlay p{
+color:white;
+width:100%;
+margin:0;
+font-family: 'Indie Flower';
+font-size: 15px;
+line-height: normal;
+}
+
+.overlay1 {
+position:absolute;
+bottom:20px;
+right:15px;
+z-index:1;
+}
+
+.overlay1 .image img{
+border-radius: 50%;
+border:0.5px solid white;
+cursor:pointer;
+}
+
+.overlay1 .image img:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+
+.overlay1 .image i
+{
+color:white;
+cursor:pointer;
+margin-top:-15px; 
+font-size:20px;
+margin-left:22px;
+position:absolute;
+}
+
+.overlay1 .image i:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+
+.overlay1 .heart{
+margin:0 auto;
+position: relative;
+}
+.overlay1 .heart i{
+
+cursor:pointer;
+padding:10px 12px 8px;
+background:#fff;
+border-radius:50%;
+display:inline-block;
+margin:10px 0 15px;
+color:#aaa;
+transition:.2s;
+}
+
+.overlay1 .heart i:hover {
+color:#666;
+}
+.overlay1 .heart i:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+.overlay1 .heart i:before {
+font-family:fontawesome;
+content:'\f004';
+font-style:normal;
+}
+
+.overlay1 .heart span {
+position: absolute;
+bottom:70px;
+left:0;
+right:0;
+visibility: hidden;
+transition:.6s;
+z-index:2;
+font-size:5px;
+color:transparent;
+font-weight:400;
+}
+
+.overlay1 .heart i.press {
+animation: size .4s;
+color:#e23b3b;
+}
+
+.overlay1 .heart span.press {
+bottom:120px;
+font-size:14px;
+visibility:visible;
+animation: fade 3s;
+}
+
+/* @keyframes fade {
+0% {color:#transparent;}
+50% {color:#f5071f;}
+100% {color:#transparent;}
+} */
+
+@keyframes size {
+0% {padding:10px 12px 8px;}
+50% {padding:14px 16px 12px;  
+margin-top:-4px;}
+100% {padding:10px 12px 8px;}
+}
+
+.overlay1 .heart p
+{
+color:white;
+font-size:15px;
+margin-top:-15px;
+font-family: 'Indie Flower';
+margin-left:5px;
+}
+
+.overlay1 .comment i
+{
+color:white;
+cursor:pointer;
+margin-top:-20px; 
+font-size:40px;
+}
+.overlay1 .comment i:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+.overlay1 .comment p
+{
+color:white;
+font-size:15px;
+margin-top:0px;
+font-family: 'Indie Flower';
+margin-left:5px;
+}
+
+.overlay1 .share i
+{
+color:white;
+cursor:pointer;
+margin-top:-20px; 
+font-size:40px;
+}
+.overlay1 .share i:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+.overlay1 .share p
+{
+color:white;
+font-size:15px;
+margin-top:-10px;
+font-family: 'Indie Flower';
+}
+
+/* end home video  */

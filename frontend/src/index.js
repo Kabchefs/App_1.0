@@ -5,8 +5,9 @@ import { ApolloProvider as ApolloHooksProvider } from '@apollo/react-hooks';
 import { ThemeProvider } from 'styled-components';
 import { createApolloClient } from 'utils/apollo-client';
 import { StoreProvider } from 'store';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css';
+import 'App.css'
 import theme from 'theme';
 
 import App from 'components/App/App';

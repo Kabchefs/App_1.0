@@ -26,6 +26,7 @@ import theme from 'theme';
 
 import { useStore } from 'store';
 import { SET_AUTH_USER } from 'store/auth';
+import BottomNav from './BottomNav';
 
 const Root = styled.div`
   display: flex;
@@ -105,6 +106,7 @@ const AppLayout = ({ location, authUser }) => {
         </Switch>
 
         <UserSuggestions pathname={location.pathname} />
+        <BottomNav/>
       </Root>
     </>
   );
