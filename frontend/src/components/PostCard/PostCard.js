@@ -178,25 +178,25 @@ const PostCard = ({
   };
 
   // changes in home 
-const RenderVideo=({src}) =>{
+const RenderVideo=({src,like,comment,name,avatar,tag}) =>{
 
   return(
 <div className="header">
             
-            <video
-            autoPlay="autoplay" muted="muted" loop="loop" playsInline="playsinline" preload="metadata" data-aos="fade-up"
+            <img
+            // autoPlay="autoplay" muted="muted" loop="loop" playsInline="playsinline" preload="metadata" data-aos="fade-up"
             
             id="video"
-            className="video "
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            className="image "
+            src={src} 
             // onClick={this.paused ? this.play() : this.pause()}
             
-            poster={src}
-            >
-            </video>
+            // poster={src}
+            />
+            
             <div className="overlay">
-              <p><b>@user name</b></p>
-              <p>#tags</p>
+              <p><b>{name}</b></p>
+              <p>{tag}</p>
               <p>
             <i>
             <marquee width="80%"  loop="3" behavior="scroll" scrollamount="2" direction="left">bg songs lyricsbg songs lyricsbg songs lyrics</marquee>
@@ -205,18 +205,28 @@ const RenderVideo=({src}) =>{
             
             </div>  			  
             <div className="overlay1">
-            <div className="image">
-              {/* <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" /> */}
+            <div >
+              <img src={avatar} alt="Avatar" />
             <i className="fa fa-plus "></i> 
               </div>
             <div className="heart">
                  <i id="heart_i"></i>
                  <span id="heart_span">loved!</span>
-            <p id="heart_i">300k</p>
+                 <Like
+                fullWidth
+                withText
+                user={author}
+                postId={postId}
+                likes={likes}
+              />
+            <p id="heart_i">{like.length}</p>
                </div>  
                <div className="comment">
                  <i className="fa fa-commenting fa-2x"></i> 
-            <p id="comment_i">300k</p>
+                 <Button fullWidth text onClick={toggleCreateComment}>
+                <PostCommentIcon /> <Spacing inline left="xxs" /> <b> <p id="comment_i">{comment.length}</p></b>
+              </Button>
+           
                  
                </div>	  
                <div className="share">
@@ -264,34 +274,34 @@ const RenderVideo=({src}) =>{
           </Button>
         </TopRow>
 
-        <Spacing left="sm" bottom="sm" top="xs">
+        {/* <Spacing left="sm" bottom="sm" top="xs">
           <H3>{title}</H3>
-        </Spacing>
+        </Spacing> */}
 {/* changing this <Poster src={image} onClick={openModal} /> to  */}
-        {image && <RenderVideo src={image} onClick={openModal} />}   
+        {image && <RenderVideo src={image} onClick={openModal} like={likes} comment={comments} name={author.fullName} avatar={author.image} tag={title}/>}   
 
         <BottomRow>
           <CountAndIcons>
-            <Count>
+            {/* <Count>
               {likes.length} likes
               <Spacing />
               <StyledButton onClick={toggleComment} text>
                 {comments.length} comments
               </StyledButton>
-            </Count>
+            </Count> */}
 
             <Icons>
-              <Like
+              {/* <Like
                 fullWidth
                 withText
                 user={author}
                 postId={postId}
                 likes={likes}
-              />
+              /> */}
 
-              <Button fullWidth text onClick={toggleCreateComment}>
+              {/* <Button fullWidth text onClick={toggleCreateComment}>
                 <PostCommentIcon /> <Spacing inline left="xxs" /> <b>Comment</b>
-              </Button>
+              </Button> */}
             </Icons>
           </CountAndIcons>
 
